@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutterplayground/screens/tetris_screen.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   void test() {
     Navigator.push(
       context,
@@ -23,8 +23,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.amber, title: const Text('appbar')),
       body: Center(
           child: Column(
         children: [
