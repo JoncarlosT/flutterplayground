@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterplayground/screens/home_screen.dart';
+import 'package:flutterplayground/screens/game_index_screen.dart';
 import 'package:flutterplayground/screens/leaderboard_screen.dart';
 
 class Navigation extends StatefulWidget {
@@ -25,11 +25,12 @@ class _NavigationState extends State<Navigation> {
         },
         selectedIndex: currentTab,
         destinations: const <Widget>[
-          NavigationDestination(icon: Icon(Icons.explore), label: "Game"),
-          NavigationDestination(icon: Icon(Icons.explore), label: "LeaderBoard")
+          NavigationDestination(icon: Icon(Icons.gamepad), label: "Game"),
+          NavigationDestination(
+              icon: Icon(Icons.leaderboard), label: "LeaderBoard")
         ],
       ),
-      body: const <Widget>[HomeScreen(), LeaderBoardScreen()][currentTab],
+      body: const <Widget>[GameIndex(), LeaderBoardScreen()][currentTab],
     );
   }
 }

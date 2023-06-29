@@ -12,6 +12,16 @@ class SnakeScreen extends StatefulWidget {
 class _SnakeScreenState extends State<SnakeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+          child: Column(
+        children: [
+          Text(
+            'snake game',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      )),
+    );
   }
 }

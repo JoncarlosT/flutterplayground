@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutterplayground/screens/tetris_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class GameIndex extends StatefulWidget {
+  const GameIndex({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<GameIndex> createState() => _GameIndexState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _GameIndexState extends State<GameIndex> {
   void test() {
     Navigator.push(
       context,

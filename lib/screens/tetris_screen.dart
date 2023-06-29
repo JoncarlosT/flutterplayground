@@ -12,6 +12,16 @@ class TetrisScreen extends StatefulWidget {
 class _TetrisScreenState extends State<TetrisScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+          child: Column(
+        children: [
+          Text(
+            'tetris game',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      )),
+    );
   }
 }
