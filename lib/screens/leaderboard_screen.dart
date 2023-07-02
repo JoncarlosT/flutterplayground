@@ -6,15 +6,17 @@ class LeaderBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-          child: Column(
-        children: [
-          Text(
-            'leaderboard',
-            style: TextStyle(fontSize: 30),
-          )
-        ],
-      )),
+      body: SafeArea(
+        child: Center(
+            child: Column(
+          children: [
+            Text(
+              'leaderboard',
+              style: TextStyle(fontSize: 30),
+            )
+          ],
+        )),
+      ),
     );
   }
 }

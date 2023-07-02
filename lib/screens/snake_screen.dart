@@ -13,15 +13,17 @@ class _SnakeScreenState extends State<SnakeScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-          child: Column(
-        children: [
-          Text(
-            'snake game',
-            style: TextStyle(fontSize: 30),
-          )
-        ],
-      )),
+      body: SafeArea(
+        child: Center(
+            child: Column(
+          children: [
+            Text(
+              'snake game',
+              style: TextStyle(fontSize: 30),
+            )
+          ],
+        )),
+      ),
     );
   }
 }
