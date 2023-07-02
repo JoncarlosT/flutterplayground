@@ -10,7 +10,7 @@ class GameIndex extends StatefulWidget {
 }
 
 class _GameIndexState extends State<GameIndex> {
-  void test(String game) {
+  void push(String game) {
     if (game == 'tetris') {
       Navigator.push(
         context,
@@ -41,14 +41,14 @@ class _GameIndexState extends State<GameIndex> {
           child: Column(
         children: [
           TextButton(
-            onPressed: () => test('tetris'),
+            onPressed: () => push('tetris'),
             child: const Text(
               'TetrisGame',
               style: TextStyle(fontSize: 30),
             ),
           ),
           TextButton(
-            onPressed: () => test('snake'),
+            onPressed: () => push('snake'),
             child: const Text(
               'SnakeGame',
               style: TextStyle(fontSize: 30),

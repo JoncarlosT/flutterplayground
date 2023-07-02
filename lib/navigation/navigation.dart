@@ -11,18 +11,26 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   int currentTab = 0;
+  String appBarTitle = 'Games';
+
+  void tabChange(int tab) {
+    setState(() {
+      currentTab = tab;
+      if (currentTab == 0) {
+        appBarTitle = "Games";
+      } else {
+        appBarTitle = "LeaderBoard";
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:
-          AppBar(backgroundColor: Colors.amber, title: const Text('appbar')),
+          AppBar(backgroundColor: Colors.green[600], title: Text(appBarTitle)),
       bottomNavigationBar: NavigationBar(
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentTab = index;
-          });
-        },
+        onDestinationSelected: (int index) => tabChange(index),
         selectedIndex: currentTab,
         destinations: const <Widget>[
           NavigationDestination(icon: Icon(Icons.gamepad), label: "Game"),

@@ -12,8 +12,8 @@ class TetrisScreen extends StatefulWidget {
 class _TetrisScreenState extends State<TetrisScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      body: const SafeArea(
         child: Center(
             child: Column(
           children: [
@@ -23,6 +23,10 @@ class _TetrisScreenState extends State<TetrisScreen> {
             )
           ],
         )),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pop(context),
+        child: const Icon(Icons.arrow_back),
       ),
     );
   }

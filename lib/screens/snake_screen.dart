@@ -10,10 +10,14 @@ class SnakeScreen extends StatefulWidget {
 }
 
 class _SnakeScreenState extends State<SnakeScreen> {
+  String appBarTitle = "Title1";
+
+  void changeTitle() {}
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      body: const SafeArea(
         child: Center(
             child: Column(
           children: [
@@ -24,6 +28,9 @@ class _SnakeScreenState extends State<SnakeScreen> {
           ],
         )),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Icon(Icons.arrow_back)),
     );
   }
 }
