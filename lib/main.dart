@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutterplayground/env.dart';
 import 'package:flutterplayground/navigation/navigation.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+Future<void> main() async {
+  await Supabase.initialize(
+    url: supabaseURL,
+    anonKey: supabaseAnonKey,
+  );
+
   runApp(const MyApp());
 }
 

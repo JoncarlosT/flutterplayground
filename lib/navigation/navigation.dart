@@ -38,7 +38,7 @@ class _NavigationState extends State<Navigation> {
               icon: Icon(Icons.leaderboard), label: "LeaderBoard")
         ],
       ),
-      body: const <Widget>[GameIndex(), LeaderBoardScreen()][currentTab],
+      body: <Widget>[const GameIndex(), LeaderBoardScreen()][currentTab],
     );
   }
 }
