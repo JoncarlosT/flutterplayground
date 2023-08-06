@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterplayground/features/Game/presentation/game.dart';
+import 'package:flutterplayground/features/Leaderboard/presentation/leader_board.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -10,15 +12,9 @@ class _DashboardState extends State<Dashboard> {
   int _currentTab = 0;
 
   static const List<Widget> _tabWidgets = <Widget>[
-    Text(
-      'Index 0: Home',
-    ),
-    Text(
-      'Index 1: Business',
-    ),
-    Text(
-      'Index 2: School',
-    ),
+    Game(),
+    LeaderBoard(),
+    Text("seeting")
   ];
 
   void handleTabSelection(int tab) => setState(() {
