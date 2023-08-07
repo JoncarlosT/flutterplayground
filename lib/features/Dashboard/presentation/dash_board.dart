@@ -28,10 +28,18 @@ class _DashboardState extends State<Dashboard> {
       body: Center(child: _tabWidgets.elementAt(_currentTab)),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.abc), label: "Games"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: "LeaderBoards"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Settings"),
+            icon: Icon(Icons.abc),
+            label: "Games",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "LeaderBoards",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Settings",
+          ),
         ],
         onTap: handleTabSelection,
       ),
