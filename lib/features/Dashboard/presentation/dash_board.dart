@@ -24,7 +24,7 @@ class _DashboardState extends State<Dashboard> {
         children: const <Widget>[
           Game(),
           LeaderBoard(),
-          Text("data"),
+          Center(child: Text("data")),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

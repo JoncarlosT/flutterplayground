@@ -10,8 +10,6 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Text("Game"),
-    );
+    return const Center(child: Text("Game"));
   }
 }

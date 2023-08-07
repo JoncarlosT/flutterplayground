@@ -10,8 +10,6 @@ class LeaderBoard extends StatefulWidget {
 class _LeaderBoardState extends State<LeaderBoard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Text("leaderboard"),
-    );
+    return const Center(child: Text("leaderboard"));
   }
 }
