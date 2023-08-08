@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterplayground/features/Game/presentation/game.dart';
-import 'package:flutterplayground/features/Leaderboard/presentation/leader_board.dart';
+
+import '../../leaderboard/presentation/leader_board.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
