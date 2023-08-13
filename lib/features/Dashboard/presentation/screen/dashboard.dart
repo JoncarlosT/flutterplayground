@@ -3,9 +3,12 @@ import 'package:flutterplayground/features/Game/presentation/game.dart';
 import 'package:flutterplayground/features/dashboard/presentation/bloc/dashboard_controller.dart';
 import 'package:provider/provider.dart';
 
-import '../../leaderboard/presentation/leader_board.dart';
+import '../../../leaderboard/presentation/leader_board.dart';
 
 class Dashboard extends StatefulWidget {
+  /// [Dashboard] switches states between bottom navigation bar.
+  /// Screens that are in bottom navigation bar are [Game], [LeaderBoard]
+  ///
   const Dashboard({super.key});
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -21,7 +24,6 @@ class _DashboardState extends State<Dashboard> {
           var tabIndex = value.tabIndex;
 
           return Scaffold(
-            appBar: AppBar(title: const Text('this a test')),
             body: IndexedStack(
               index: tabIndex,
               children: const <Widget>[
