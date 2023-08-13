@@ -45,7 +45,7 @@ class _DashboardState extends State<Dashboard> {
                   label: "Settings",
                 ),
               ],
-              onTap: (i) => value.setTabIndex(i),
+              onTap: (idx) => value.tabIndex = idx,
             ),
           );
         },

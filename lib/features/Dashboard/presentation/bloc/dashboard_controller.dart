@@ -5,8 +5,8 @@ class DashboardController extends ChangeNotifier {
 
   int get tabIndex => _tabIndex;
 
-  void setTabIndex(int int) {
-    _tabIndex = int;
+  set tabIndex(int tab) {
+    _tabIndex = tab;
     notifyListeners();
   }
 }
