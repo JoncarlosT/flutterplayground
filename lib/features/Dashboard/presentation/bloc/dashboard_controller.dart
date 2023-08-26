@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// The types of screens navigated from [Dashboard].
+///
 enum DashboardTabs { gameScreen, leaderboardScreen, settingScreen }
 
 /// [DashboardController] handles the state of the current tab selected in the navigation bar on [Dashboard].

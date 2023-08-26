@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const double _borderRadius = 40;
+const double _borderRadius = 35;
 
 class CustomNavigationBar extends StatelessWidget {
   /// [CustomNavigationBar] is the custom bottom navigation bar used in [Dashboard].

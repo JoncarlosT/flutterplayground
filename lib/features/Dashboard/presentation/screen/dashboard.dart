@@ -34,7 +34,7 @@ class Dashboard extends StatelessWidget {
               numberOfTabs: value.dashBoardTabLength,
               navigationBarItems: const <Tab>[
                 Tab(
-                  icon: Icon(Icons.abc),
+                  icon: Icon(Icons.games),
                   text: "Games",
                 ),
                 Tab(
@@ -42,7 +42,7 @@ class Dashboard extends StatelessWidget {
                   text: "LeaderBoards",
                 ),
                 Tab(
-                  icon: Icon(Icons.home),
+                  icon: Icon(Icons.settings),
                   text: "Settings",
                 ),
               ],
