@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterplayground/features/Game/presentation/game.dart';
+import 'package:flutterplayground/features/Settings/presentation/screen/settings.dart';
 import 'package:flutterplayground/features/dashboard/presentation/bloc/dashboard_controller.dart';
 import 'package:flutterplayground/features/dashboard/presentation/widget/custom_navigation_bar.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +26,7 @@ class Dashboard extends StatelessWidget {
               children: const <Widget>[
                 Game(),
                 LeaderBoard(),
-                Center(child: Text("data")),
+                Settings(),
               ],
             ),
             bottomNavigationBar: CustomNavigationBar(
