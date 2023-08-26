@@ -28,31 +28,22 @@ class CustomNavigationBar extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
-        color: Colors.amber,
-        borderRadius: BorderRadius.all(
-          Radius.circular(40),
-        ),
+        color: Colors.blue,
+        borderRadius: BorderRadius.all(Radius.circular(40)),
       ),
       child: DefaultTabController(
         initialIndex: currentTab,
         length: numberOfTabs,
         animationDuration: const Duration(),
         child: TabBar(
-          indicator: const BoxDecoration(color: Colors.red),
+          indicator: const BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.all(Radius.circular(40)),
+          ),
           tabs: navigationBarItems,
           onTap: onTabSelect,
         ),
       ),
     );
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return BottomNavigationBar(
-  //     backgroundColor: Colors.amber,
-  //     items: navigationBarItems,
-  //     onTap: onTabSelect,
-  //     currentIndex: currentTab,
-  //   );
-  // }
 }
