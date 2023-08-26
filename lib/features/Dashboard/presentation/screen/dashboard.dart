@@ -12,6 +12,7 @@ class Dashboard extends StatelessWidget {
   /// Screens that are in bottom navigation bar are [Game], [LeaderBoard]
   ///
   const Dashboard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

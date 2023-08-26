@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const double _borderRadius = 40;
+
 class CustomNavigationBar extends StatelessWidget {
   /// [CustomNavigationBar] is the custom bottom navigation bar used in [Dashboard].
   ///
@@ -12,15 +14,19 @@ class CustomNavigationBar extends StatelessWidget {
   });
 
   /// A list of navigation tabs.
+  ///
   final List<Tab> navigationBarItems;
 
   /// onTap function to handle switching between tabs.
+  ///
   final void Function(int) onTabSelect;
 
   /// The current tab being displayed.
+  ///
   final int currentTab;
 
   /// The number of tabs in [CustomNavigationBar] need for [DefaultTabController]
+  ///
   final int numberOfTabs;
 
   @override
@@ -29,7 +35,7 @@ class CustomNavigationBar extends StatelessWidget {
       margin: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
         color: Colors.blue,
-        borderRadius: BorderRadius.all(Radius.circular(40)),
+        borderRadius: BorderRadius.all(Radius.circular(_borderRadius)),
       ),
       child: DefaultTabController(
         initialIndex: currentTab,
@@ -38,7 +44,7 @@ class CustomNavigationBar extends StatelessWidget {
         child: TabBar(
           indicator: const BoxDecoration(
             color: Colors.red,
-            borderRadius: BorderRadius.all(Radius.circular(40)),
+            borderRadius: BorderRadius.all(Radius.circular(_borderRadius)),
           ),
           tabs: navigationBarItems,
           onTap: onTabSelect,
