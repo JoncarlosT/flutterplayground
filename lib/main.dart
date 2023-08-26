@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterplayground/config/theme/app_theme.dart';
-
-import 'features/dashboard/presentation/screen/dashboard.dart';
+import 'package:flutterplayground/core/app_navigation/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +16,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: "Flutter Demo",
       theme: appTheme,
-      home: const Dashboard(),
+      routerConfig: routes,
     );
   }
 }
