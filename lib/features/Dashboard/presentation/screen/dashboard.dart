@@ -30,18 +30,19 @@ class Dashboard extends StatelessWidget {
               ],
             ),
             bottomNavigationBar: CustomNavigationBar(
-              navigationBarItems: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
+              numberOfTabs: value.dashBoardTabLength,
+              navigationBarItems: const <Tab>[
+                Tab(
                   icon: Icon(Icons.abc),
-                  label: "Games",
+                  text: "Games",
                 ),
-                BottomNavigationBarItem(
+                Tab(
                   icon: Icon(Icons.home),
-                  label: "LeaderBoards",
+                  text: "LeaderBoards",
                 ),
-                BottomNavigationBarItem(
+                Tab(
                   icon: Icon(Icons.home),
-                  label: "Settings",
+                  text: "Settings",
                 ),
               ],
               onTabSelect: (idx) => value.tabIndex = idx,

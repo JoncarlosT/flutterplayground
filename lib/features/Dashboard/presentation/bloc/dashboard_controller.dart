@@ -9,6 +9,8 @@ class DashboardController extends ChangeNotifier {
 
   int get tabIndex => _tabIndex;
 
+  int get dashBoardTabLength => DashboardTabs.values.length;
+
   set tabIndex(int tab) {
     _tabIndex = tab;
     notifyListeners();
