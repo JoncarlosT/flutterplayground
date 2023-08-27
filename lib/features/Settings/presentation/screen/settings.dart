@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterplayground/config/theme/theme_controller.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 class Settings extends StatefulWidget {
@@ -12,21 +12,15 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeController>(
-      builder: (context, value, child) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('settings'),
-            ElevatedButton(
-              onPressed: () {
-                value.toggleTheme();
-              },
-              child: const Text('toggle theme'),
-            )
-          ],
-        );
-      },
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text('settings'),
+        ElevatedButton(
+          onPressed: () {},
+          child: const Text('toggle theme'),
+        )
+      ],
     );
   }
 }
