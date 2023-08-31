@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterplayground/core/app_navigation/routes.dart';
+import 'package:go_router/go_router.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -16,8 +18,10 @@ class _SettingsState extends State<Settings> {
         children: [
           const Text('settings'),
           ElevatedButton(
-            onPressed: () {},
-            child: const Text('toggle theme'),
+            onPressed: () {
+              GoRouter.of(context).go(Routes.root);
+            },
+            child: const Text('logout'),
           )
         ],
       ),
