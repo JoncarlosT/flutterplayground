@@ -22,14 +22,6 @@ class Dashboard extends StatelessWidget {
           var tabIndex = value.tabIndex;
 
           return Scaffold(
-            body: IndexedStack(
-              index: tabIndex,
-              children: const <Widget>[
-                Game(),
-                LeaderBoard(),
-                Settings(),
-              ],
-            ),
             bottomNavigationBar: CustomNavigationBar(
               numberOfTabs: value.dashBoardTabLength,
               navigationBarItems: const <Tab>[
