@@ -1,13 +1,30 @@
+import 'package:flutter/material.dart';
 import 'package:flutterplayground/features/dashboard/presentation/screen/dashboard.dart';
 import 'package:go_router/go_router.dart';
 
+/// List of routes used with apps navigation [routes].
+///
+class Routes {
+  static const root = '/';
+  static const game = '/game';
+}
+
+/// The apps navigation.
 final GoRouter routes = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) {
-        return const Dashboard();
-      },
-    ),
-  ],
+  debugLogDiagnostics: true,
+  routes: [_root, _game],
+);
+
+final _root = GoRoute(
+  path: Routes.root,
+  builder: (context, state) {
+    return const Dashboard();
+  },
+);
+
+final _game = GoRoute(
+  path: Routes.game,
+  builder: (context, state) {
+    return const Scaffold();
+  },
 );

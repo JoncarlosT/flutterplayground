@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterplayground/core/app_navigation/routes.dart';
+import 'package:go_router/go_router.dart';
 
 class Game extends StatefulWidget {
   const Game({super.key});
@@ -10,6 +12,22 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Game"));
+    return Scaffold(
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("Game"),
+            ElevatedButton(
+              onPressed: () {
+                GoRouter.of(context).go(Routes.game);
+              },
+              child: const Text('button'),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
