@@ -31,7 +31,6 @@ class CustomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('this is currentTab $currentTab');
     return Container(
       margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(
