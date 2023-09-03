@@ -3,6 +3,7 @@ import 'package:flutterplayground/features/Game/presentation/game.dart';
 import 'package:flutterplayground/features/Settings/presentation/screen/settings.dart';
 import 'package:flutterplayground/features/dashboard/presentation/bloc/dashboard_controller.dart';
 import 'package:flutterplayground/features/dashboard/presentation/widget/custom_navigation_bar.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../../../leaderboard/presentation/leader_board.dart';
@@ -11,7 +12,9 @@ class Dashboard extends StatelessWidget {
   /// [Dashboard] switches states between bottom navigation bar.
   /// Screens that are in bottom navigation bar are [Game], [LeaderBoard]
   ///
-  const Dashboard({super.key});
+  const Dashboard({super.key, required this.navigationShell});
+
+  final StatefulNavigationShell navigationShell;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +25,7 @@ class Dashboard extends StatelessWidget {
           var tabIndex = value.tabIndex;
 
           return Scaffold(
+            body: navigationShell,
             bottomNavigationBar: CustomNavigationBar(
               numberOfTabs: value.dashBoardTabLength,
               navigationBarItems: const <Tab>[
@@ -38,8 +42,10 @@ class Dashboard extends StatelessWidget {
                   text: "Settings",
                 ),
               ],
-              onTabSelect: (idx) => value.tabIndex = idx,
-              currentTab: tabIndex,
+              onTabSelect: (idx) {
+                navigationShell.goBranch(idx);
+              },
+              currentTab: navigationShell.currentIndex,
             ),
           );
         },

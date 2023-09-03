@@ -35,7 +35,9 @@ final GoRouter routes = GoRouter(
     StatefulShellRoute.indexedStack(
       parentNavigatorKey: NavigationService.navigatorKey,
       builder: (context, state, navigationShell) {
-        return const Dashboard();
+        return Dashboard(
+          navigationShell: navigationShell,
+        );
       },
       branches: <StatefulShellBranch>[
         StatefulShellBranch(
